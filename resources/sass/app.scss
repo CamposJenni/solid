@@ -1,0 +1,127 @@
+@import 'variables';
+
+@import 'bootstrap/scss/bootstrap';
+
+$paleta-color-primary:  #908279;
+$paleta-color-secondary:  #ffce30;
+$paleta-color-tertiary: #f3eae8;
+$paleta-color-text-dark: #857679;
+$paleta-color-background-light: #EEEEEE;
+$paleta-color-white: #ffffff;
+
+:root {
+    --color-primary: #{$paleta-color-primary};
+    --color-secondary: #{$paleta-color-secondary};
+    --color-tertiary: #{$paleta-color-tertiary};
+    --color-text-dark: #{$paleta-color-text-dark};
+    --color-background-light: #{$paleta-color-background-light};
+    --color-white: #{$paleta-color-white};
+}
+
+body {
+    background-color: var(--color-background-light);
+    color: var(--color-primary);
+}
+
+.btn-primary {
+    background-color: $paleta-color-secondary;
+    border-color: $paleta-color-secondary;
+    color: $paleta-color-primary;
+    &:hover {
+        background-color: darken($paleta-color-secondary, 5%);
+        border-color: darken($paleta-color-secondary, 5%);
+    }
+}
+
+a {
+    color: var(--color-primary);
+    &:hover {
+        color: var(--color-secondary);
+    }
+}
+
+.card {
+    border: 1px solid var(--color-tertiary);
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.form-control, .form-select {
+    border-color: var(--color-tertiary);
+    &:focus {
+        border-color: var(--color-secondary);
+        box-shadow: 0 0 0 0.25rem #{rgba($paleta-color-secondary, 0.25)};
+    }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--color-background-light);
+}
+
+.table thead th {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.navbar {
+    background-color: var(--color-primary) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--color-background-light) !important;
+    &:hover {
+        color: var(--color-secondary) !important;
+    }
+}
+
+.dropdown-menu {
+    background-color: var(--color-primary);
+    .dropdown-item {
+        color: var(--color-background-light);
+        &:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+        }
+    }
+}
+
+.alert-info {
+    background-color: lighten($paleta-color-tertiary, 10%);
+    border-color: var(--color-tertiary);
+    color: var(--color-primary);
+}
+
+.navbar {
+    background-color: #819A91 !important;
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-toggle {
+    color: #ffffff !important;
+
+    &:hover {
+        color: #e0f2f1 !important;
+    }
+}
+
+.dropdown-menu {
+    background-color: #009688;
+
+    .dropdown-item {
+        color: #ffffff;
+
+        &:hover {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+    }
+}
